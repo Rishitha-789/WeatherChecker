@@ -1,1 +1,159 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    background: linear-gradient(135deg, #a8edea, #fed6e3);
+    color: #333;
+}
 
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    color: #00796b;
+}
+
+p {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input, select, button {
+    padding: 12px 15px;
+    margin: 5px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #00796b;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+    border-color: #004d40;
+    box-shadow: 0 0 5px rgba(0, 77, 64, 0.5);
+}
+
+button {
+    background-color: #00796b;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #004d40;
+}
+
+#autocompleteList {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 250px;
+    text-align: left;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+#autocompleteList li {
+    background: #ffffffcc;
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    transition: background 0.2s;
+}
+
+#autocompleteList li:hover {
+    background-color: #b2dfdb;
+}
+
+#weatherResult {
+    margin-top: 20px;
+    padding: 20px;
+    background: #ffffffcc;
+    border-radius: 15px;
+    display: inline-block;
+    min-width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#weatherResult img {
+    width: 80px;
+    height: 80px;
+}
+
+.error {
+    color: #d32f2f;
+    font-weight: bold;
+}
+
+.forecast-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.card {
+    background: #ffffffcc;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    width: 120px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card p {
+    margin: 5px 0;
+}
+
+.card img {
+    width: 60px;
+    height: 60px;
+}
+
+#recentSearches {
+    margin-top: 20px;
+}
+
+#recentList li {
+    display: inline-block;
+    margin: 5px 10px;
+    padding: 8px 12px;
+    background: #00796b;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#recentList li:hover {
+    background: #004d40;
+}
+
+footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: #555;
+}
+
+@media screen and (max-width: 600px) {
+    .forecast-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 80%;
+        max-width: 200px;
+    }
+}
