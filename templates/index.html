@@ -1,1 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Weather Checker</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<h1>Welcome to Weather Checker</h1>
+<p>Check the current weather and 5-day forecast for any city!</p>
+<p>Type a city name below and select your preferred temperature unit.</p>
 
+<form id="weatherForm">
+    <input type="text" id="cityInput" name="city" placeholder="Enter city" autocomplete="off" required>
+    <select id="unitSelect">
+        <option value="metric">Celsius</option>
+        <option value="imperial">Fahrenheit</option>
+    </select>
+    <button type="submit">Get Weather</button>
+</form>
+
+<ul id="autocompleteList"></ul>
+
+<div id="recentSearches">
+    <h3>Recent Searches:</h3>
+    <ul id="recentList"></ul>
+</div>
+
+<div id="weatherResult"></div>
+
+<div id="forecast"></div>
+
+<footer>
+    <p>&copy; 2025 Weather Checker</p>
+</footer>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
